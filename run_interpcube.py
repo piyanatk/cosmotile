@@ -1,10 +1,14 @@
+"""
+This script shows how to run interpcube in parallel using multiprocessing.
+
+"""
 import multiprocessing
 from glob import glob
 
 import numpy as np
 
-from routines import interpcube
-from modules import settings
+from . import interpcube
+from . import constants
 
 lsize = 128
 INDIR = '/data3/piyanat/model/21cm/original/'
@@ -15,9 +19,9 @@ xi = xi[::-1]
 
 cube = np.sort(glob(INDIR + 'delta_21cm_l{:d}_xi????.npy'.format(lsize)))[::-1]
 
-freqlow = settings.FREQ['EoR_low_80kHz']
-freqhi = settings.FREQ['EoR_hi_80kHz']
-f21 = settings.FREQ['21cm'].value
+freqlow = constants.FREQ['EoR_low_80kHz']
+freqhi = constants.FREQ['EoR_hi_80kHz']
+f21 = constants.FREQ['21cm'].value
 
 zlow = f21 / freqlow - 1
 zhi = f21 / freqhi - 1
@@ -26,7 +30,7 @@ freq = np.hstack((freqlow, freqhi))
 z = np.hstack((zlow, zhi))
 
 out = [OUTDIR + 'interp_delta_21cm_l{:d}_{:3.3f}MHz.npy'
-      .format(lsize, f) for f in freq]
+       .format(lsize, f) for f in freq]
 
 
 def run(args):
