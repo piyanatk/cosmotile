@@ -6,6 +6,8 @@ Author: Piyanat Kittiwisit
 Create: August 19, 2013
 
 """
+from __future__ import print_function, division
+
 import argparse
 from datetime import datetime
 
@@ -56,8 +58,8 @@ def hpx2sin(hpxfile, fitsfile, ra, dec, size=7480, res=0.015322941176470588,
 
 
     """
-    print 'hpx2sin {:s} {:s} {:.3f} {:.3f} {:d} {:f}'\
-          .format(hpxfile, fitsfile, ra, dec, size, res)
+    print('hpx2sin {:s} {:s} {:.3f} {:.3f} {:d} {:f}'
+          .format(hpxfile, fitsfile, ra, dec, size, res))
     if not hpx_array:
         hpx_array, hpx_hdr = hp.read_map(hpxfile, h=True)
     if not hp.isnpixok(len(hpx_array)):

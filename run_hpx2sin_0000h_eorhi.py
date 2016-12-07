@@ -2,6 +2,8 @@
 This script shows how to run hpx2sin in parallel using multiprocessing module.
 
 """
+from __future__ import print_function, division
+
 import multiprocessing
 
 from . import constants

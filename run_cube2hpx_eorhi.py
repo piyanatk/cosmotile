@@ -2,6 +2,8 @@
 This script shows how to run cube2hpx in parallel using multiprocessing module.
 
 """
+from __future__ import print_function, division
+
 from multiprocessing import Pool
 
 from .cube2hpx import cube2hpx
@@ -18,7 +20,7 @@ hpxfiles = [hpx_dir + 'hpx_interp_delta_21cm_l128_{:.3f}MHz.fits'
 
 
 def call_cube2hpx(args):
-    print args
+    print(args)
     cube, hpx, f = args
     cube2hpx(cube, hpx, f)
 

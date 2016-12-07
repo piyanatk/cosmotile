@@ -2,6 +2,8 @@
 This script shows how to run interpcube in parallel using multiprocessing.
 
 """
+from __future__ import print_function, division
+
 import multiprocessing
 from glob import glob
 

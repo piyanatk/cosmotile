@@ -1,11 +1,11 @@
-"""
-Program: cube2hpx.py
-    Perform tiling and gridding of 21 cm simlation cube into a healpix map.
-Author: Piyanat Kittiwisit
-        piyanat.kittiwisit@asu
+"""Perform tiling and gridding of 21 cm simulation cubes to HEALPix maps.
+
+Author: Piyanat Kittiwisit (piyanat.kittiwisit@asu.edu)
 Created: August 19, 2013
 
 """
+from __future__ import print_function, division
+
 import argparse
 import os
 
