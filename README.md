@@ -1,4 +1,4 @@
-## DEPRECATED: Please use the re-packed and re-tolled of this algorithm in the [new cosmotile package by Steven Murray](https://github.com/steven-murray/cosmotile)
+## DEPRECATED: Please use the re-packed and re-tooled of this algorithm in the [new cosmotile package by Steven Murray](https://github.com/steven-murray/cosmotile)
 
 # cosmotile
 
